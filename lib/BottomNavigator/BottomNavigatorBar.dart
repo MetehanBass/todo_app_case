@@ -38,8 +38,8 @@ class _BottomNavigatorState extends State<BottomNavigator> {
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.business),
-              label: 'Business',
+              icon: Icon(Icons.list),
+              label: 'Todo',
             ),
           ],
           currentIndex: _selectedIndex,

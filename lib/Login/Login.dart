@@ -31,7 +31,6 @@ class _LoginState extends State<Login> {
       child: WillPopScope(
         onWillPop: () async => false,
         child: Scaffold(
-          resizeToAvoidBottomInset: false,
           body: Container(
             width: size.width,
             height: size.height,
@@ -58,10 +57,10 @@ class _LoginState extends State<Login> {
                         TextFormField(
                           textInputAction: TextInputAction.next,
                           style: k14w400AxiBlack(),
-                          decoration: const InputDecoration(
+                          decoration: InputDecoration(
                             contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
                             labelText: "E-Mail",
-                            labelStyle: TextStyle(color: Colors.black),
+                            labelStyle: k16w400MontBlack(),
                           ),
                           controller: email,
                         ),
@@ -70,16 +69,17 @@ class _LoginState extends State<Login> {
                           style: k14w400AxiBlack(),
                           obscureText: controller.showPassword,
                           decoration: InputDecoration(
-                              suffixIcon: IconButton(
-                                icon: Icon(
-                                  (controller.showPassword == true) ? Icons.visibility_off_sharp : Icons.visibility_sharp,
-                                  color: Colors.black,
-                                ),
-                                onPressed: () => controller.changeShowPasswordStatus(),
+                            suffixIcon: IconButton(
+                              icon: Icon(
+                                (controller.showPassword == true) ? Icons.visibility_off_sharp : Icons.visibility_sharp,
+                                color: Colors.black,
                               ),
-                              contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                              labelText: "Password",
-                              labelStyle: const TextStyle(color: Colors.black)),
+                              onPressed: () => controller.changeShowPasswordStatus(),
+                            ),
+                            contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                            labelText: "Password",
+                            labelStyle: k16w400MontBlack(),
+                          ),
                           controller: password,
                         ),
                         SizedBox(
